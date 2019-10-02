@@ -1,1 +1,17 @@
+# Author: VRA
+# Maintainer: VRA,PB;CAF
+# Date: Oct. 2
+# License: (c) VRA, GPL-2 or newer
+# --------------------------------------------------
+# dotfiles/bash/bash_profile
+
+# todo: add aliases
+# todo: add path configuration
+# fixme: improve prompt
+
+
+
+
 export PS1="\u@\h:\w "
+
+# Done
