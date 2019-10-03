@@ -2,3 +2,7 @@
     name = vrozoa
     email = v.rozo40@uniandes.edu.co
 
+
+
+alias gs="git status"
+alias gc="git commit -a"

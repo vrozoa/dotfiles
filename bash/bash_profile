@@ -1,17 +1,30 @@
-# Author: VRA
 # Maintainer: VRA,PB;CAF
-# Date: Oct. 2
+# Date: Oct.2 adapted from pball github
 # License: (c) VRA, GPL-2 or newer
 # --------------------------------------------------
 # dotfiles/bash/bash_profile
 
 # todo: add aliases
 # todo: add path configuration
-# fixme: improve prompt
-
-
-
 
 export PS1="\u@\h:\w "
+ 
+    # cursor config
+  
+PS1="\[\033]0;\h\007\]"; # working directory base name
+PS1+="\[${bold}\]\n"; # newline
+PS1+="\[${userStyle}\]\u"; # username
+PS1+="\[${white}\]@";
+PS1+="\[${hostStyle}\]\h"; # host
+PS1+="\[${white}\]:";
+PS1+="\[${green}\]\w"; # working directory full path
+PS1+="\n";
+PS1+="\[${white}\] \$ \[${reset}\]"; # `$` (and reset color)
+export PS1
+
+    # aliases
+
+alias gs="git status"
+alias gc="git commit"
 
 # Done
