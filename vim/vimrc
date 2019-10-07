@@ -1,8 +1,10 @@
-" todo: add comment block
-" todo: change cursors for modes
-" todo: change to neo vim
+" Maintainer: VRA,PB;CAF
+" Date: Oct.7 
+" License: (c) VRA, GPL-2 or newer
+" --------------------------------------------------
+" dotfiles/vim/vimrc
 
-    " basic with CAFs help
+" basic with CAFs help
 
 set nocompatible
 syntax enable
@@ -13,7 +15,7 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 nnoremap <C-h> :silent set relativenumber! number!<CR>
 autocmd FileType make set noexpandtab
 
-    "no flechas
+"no flechas
 " Remove newbie crutches in Command Mode
 cnoremap <Down> <Nop>
 cnoremap <Left> <Nop>
@@ -39,11 +41,12 @@ vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
 
-    " Change cursor
+" Change cursor
 
 :autocmd InsertEnter * set cul 
 :autocmd InsertLeave * set nocul
 
-    " done.
+
+" done.
 
 
