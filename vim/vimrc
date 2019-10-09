@@ -24,12 +24,6 @@ cnoremap <Left> <Nop>
 cnoremap <Right> <Nop>
 cnoremap <Up> <Nop>
 
-" Remove newbie crutches in Insert Mode
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-inoremap <Up> <Nop>
-
 " Remove newbie crutches in Normal Mode
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
@@ -48,7 +42,24 @@ vnoremap <Up> <Nop>
 :autocmd InsertEnter * set cul 
 :autocmd InsertLeave * set nocul
 
+" plugs
+call plug#begin('~/.vim/plugged')
+Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-github'
+Plug 'ncm2/ncm2-syntax'
+Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-vim'
+Plug 'ervandew/supertab'
+call plug#end()
 
-" done.
-
+let g:ale_linters = {
+\    'python': ['flake8']
+\}
+let g:airline_theme='sol'
 
