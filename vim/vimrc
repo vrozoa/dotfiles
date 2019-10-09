@@ -5,6 +5,8 @@
 " dotfiles/vim/vimrc
 
 " basic with CAFs help
+colo desert
+syntax on
 
 set nocompatible
 syntax enable
