@@ -5,17 +5,25 @@
 " dotfiles/vim/vimrc
 
 " basic with CAFs help
+let maplocalleader = ','
 colo desert
 syntax on
 
 set nocompatible
+set cursorline
 syntax enable
 set showmatch
+set number
 set relativenumber
+set colorcolumn=80
+set textwidth=80
 set smartindent
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 nnoremap <C-h> :silent set relativenumber! number!<CR>
 autocmd FileType make set noexpandtab
+
+"no gets en R
+let R_assign = 0
 
 "no flechas
 " Remove newbie crutches in Command Mode
@@ -42,8 +50,16 @@ vnoremap <Up> <Nop>
 :autocmd InsertEnter * set cul 
 :autocmd InsertLeave * set nocul
 
+" close brackets/parens/quotes
+inoremap ( ()<C-G>U<Left>
+inoremap [ []<C-G>U<Left>
+inoremap { {}<C-G>U<Left>
+inoremap <expr>) getline('.')[col('.')-1] == ")" ? "\<C-G>U<Right>" : ")"
+inoremap <expr>] getline('.')[col('.')-1] == "]" ? "\<C-G>U<Right>" : "]"
+inoremap <expr>} getline('.')[col('.')-1] == "}" ? "\<C-G>U<Right>" : "}"
+
 " plugs
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -57,7 +73,16 @@ Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-vim'
 Plug 'ervandew/supertab'
 Plug 'luochen1990/rainbow'
+Plug 'godlygeek/tabular'
+Plug 'jalvesaq/Nvim-R'
 call plug#end()
+
+" Taraks shortcuts
+vmap <Space> <Plug>RDSendSelection
+nmap <Space> <Plug>RDSendLine
+
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 let g:ale_linters = {
