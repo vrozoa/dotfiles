@@ -19,6 +19,8 @@ set colorcolumn=80
 set textwidth=80
 set smartindent
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set list
+set listchars=tab:▸\ ,eol:¬,nbsp:·,trail:·
 nnoremap <C-h> :silent set relativenumber! number!<CR>
 autocmd FileType make set noexpandtab
 
@@ -89,4 +91,5 @@ let g:ale_linters = {
 \    'python': ['flake8']
 \}
 let g:airline_theme='sol'
+
 
