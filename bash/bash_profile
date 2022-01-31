@@ -19,6 +19,7 @@ export PS1="\n\[\e[1;35m\]\u\[\e[0;33m\] at \[\e[1;36m\]\h\[\e[0;33m\]:\[\e[0;33
 alias gs="git status"
 alias gc="git commit"
 alias ll="ls -ltrF"
+alias la="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

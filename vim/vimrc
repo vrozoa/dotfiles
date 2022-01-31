@@ -61,7 +61,8 @@ inoremap <expr>] getline('.')[col('.')-1] == "]" ? "\<C-G>U<Right>" : "]"
 inoremap <expr>} getline('.')[col('.')-1] == "}" ? "\<C-G>U<Right>" : "}"
 
 " plugs
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin() "('~/.local/share/nvim/plugged')
+Plug 'preservim/NERDTree'
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -79,8 +80,8 @@ Plug 'godlygeek/tabular'
 Plug 'jalvesaq/Nvim-R'
 call plug#end()
 
-" Taraks shortcuts
-vmap <Space> <Plug>RDSendSelection
+    " Taraks shortcuts
+    vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 
 autocmd BufEnter * call ncm2#enable_for_buffer()
