@@ -66,14 +66,14 @@ Plug 'preservim/NERDTree'
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ncm2/ncm2'
+" Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-github'
-Plug 'ncm2/ncm2-syntax'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-vim'
+" Plug 'ncm2/ncm2-bufword'
+" Plug 'ncm2/ncm2-path'
+" Plug 'ncm2/ncm2-github'
+" Plug 'ncm2/ncm2-syntax'
+" Plug 'ncm2/ncm2-jedi'
+" Plug 'ncm2/ncm2-vim'
 Plug 'ervandew/supertab'
 Plug 'luochen1990/rainbow'
 Plug 'godlygeek/tabular'
@@ -84,7 +84,7 @@ call plug#end()
     vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 
-autocmd BufEnter * call ncm2#enable_for_buffer()
+" autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
