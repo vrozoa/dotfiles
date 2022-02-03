@@ -5,7 +5,6 @@
 # dotfiles/bash/bash_profile
 
 export PATH="$HOME/bin:$PATH"
-# export PATH="/anaconda3/bin:$PATH"
 
 
 export EDITOR=/usr/bin/nvim
@@ -23,38 +22,9 @@ alias la="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-# path configuration
 
-# added by Anaconda3 2019.07 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     \eval "$__conda_setup"
-# else
-#     if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
-# # . "/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
-#         CONDA_CHANGEPS1=false conda activate base
-#     else
-#         \export PATH="/anaconda3/bin:$PATH"
-#     fi
-# fi
-# u//anaconda3/bin://anaconda3/condabin:/usr/bin:/bin:/usr/sbin:/sbin:nset __conda_setup
-# <<< conda init <<<
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('//anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-# else
-#    if [ -f "//anaconda3/etc/profile.d/conda.sh" ]; then
-#        . "//anaconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="//anaconda3/bin:$PATH"
-#    fi
-#fi
-# unset __conda_setup
-# <<< conda initialize <<<
-#conda deactivate
+# HRDAG resource utils 
+
+export PATH+="~/git/resource-utils/bin"
 
 # done
