@@ -4,7 +4,7 @@
 # --------------------------------------------------
 # dotfiles/bash/bash_profile
 
-export PATH="$HOME/bin:$PATH"
+ export PATH="$HOME/bin:$PATH"
 
 
 export EDITOR=/usr/bin/nvim
@@ -25,6 +25,6 @@ alias ....="cd ../../.."
 
 # HRDAG resource utils 
 
-export PATH+="~/git/resource-utils/bin"
+export PATH="~/git/resource-utils/bin:$PATH"
 
 # done
